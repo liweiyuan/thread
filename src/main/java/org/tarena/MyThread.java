@@ -3,7 +3,7 @@ package org.tarena;
 
 public class MyThread extends Thread{
 
-    private int count=20;
+    private int count=5;
 
     public MyThread(String name) {
         super();
@@ -12,9 +12,13 @@ public class MyThread extends Thread{
 
     @Override
     public void run() {
-        while(count>0){
+        //不共享数据
+        /*while(count>0){
             count--;
             System.out.println("由  "+Thread.currentThread().getName()+"  计算,count="+count);
-        }
+        }*/
+        //共享数据--明显线程不安全
+        count--;
+        System.out.println("由  "+Thread.currentThread().getName()+"  计算,count="+count);
     }
 }
