@@ -1,7 +1,7 @@
 package org.tarena;
 
 public class Run {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         MyThread myThread1=new MyThread("A");
         MyThread myThread2=new MyThread("B");
         MyThread myThread3=new MyThread("C");
@@ -12,6 +12,9 @@ public class Run {
         myThread3.start();
         myThread4.start();
         myThread5.start();
+
+        Thread.sleep(2000);
+        System.err.println("myThread5:"+myThread5.isAlive());
 
     }
 }

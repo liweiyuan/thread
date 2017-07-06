@@ -18,7 +18,8 @@ public class MyThread extends Thread{
             System.out.println("由  "+Thread.currentThread().getName()+"  计算,count="+count);
         }*/
         //共享数据--明显线程不安全
+        super.run();
         count--;
-        System.out.println("由  "+Thread.currentThread().getName()+"  计算,count="+count);
+        System.out.println("由  "+Thread.currentThread().getName()+"  计算,count="+count+",  run:"+this.isAlive());
     }
 }
