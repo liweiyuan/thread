@@ -5,6 +5,7 @@ import java.util.concurrent.*;
 
 /**
  * Created by spark on 17-9-4.
+ * ThreadLocal性能测试与普通比较
  */
 public class QPSTestDemo {
 
