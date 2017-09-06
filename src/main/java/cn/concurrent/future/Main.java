@@ -6,7 +6,7 @@ package cn.concurrent.future;
 public class Main {
 
 
-    
+
     public static void main(String[] args) {
         Client client = new Client();
         //这里会立即返回，因为得到的是FutureData而不是RealData

@@ -28,4 +28,6 @@ public class FutureData implements Data {
         }
         return realData.result;
     }
+
+
 }
