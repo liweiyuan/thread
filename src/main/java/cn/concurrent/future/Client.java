@@ -3,7 +3,7 @@ package cn.concurrent.future;
 /**
  * Created by spark on 17-9-6.
  *
- * 
+ *
  */
 public class Client {
     public Data request(final String queryStr) {
