@@ -19,6 +19,7 @@ public class Memoizer3<A, V> implements Computable<A, V> {
     //这个很好的解决了并发的问题。
     //首先会检查相应的计算是否已经开启，如果没有开启，就创建一个FutureTask，注册到Map中，
     //如果开启了，就等待计算的结果
+    //问题:高并发计算的情况下，if语句不是同步的，如果两个线程计算的值相同，就有可能不是原子操作的
     @Override
     public V compute(final A arg) throws InterruptedException {
         Future<V> result = cache.get(arg);
