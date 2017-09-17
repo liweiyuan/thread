@@ -11,7 +11,7 @@ public class RealData implements Data {
         //RealData的构造很慢，需要用户等待很久，这里使用sleep模拟。
         StringBuffer sb = new StringBuffer();
         for (int i = 0; i < 10; i++) {
-            sb.append(result);
+            sb.append(result + ",");
             try {
                 //使用sleep，代替一个很慢的操作
                 Thread.sleep(100);
@@ -21,7 +21,6 @@ public class RealData implements Data {
         }
         this.result = sb.toString();
     }
-
 
 
     @Override
