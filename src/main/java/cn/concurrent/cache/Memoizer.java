@@ -1,25 +1,14 @@
-package cn.concurrent;
+package cn.concurrent.cache;
 
-import java.math.BigInteger;
+import cn.concurrent.cache.Computable;
+
 import java.util.HashMap;
 import java.util.Map;
 
 /**
  * Created by spark on 17-9-17.
  */
-public interface Computable<A, V> {
-    V compute(A arg) throws InterruptedException;
-}
-
-class ExpensiveFunction implements Computable<String, BigInteger> {
-    @Override
-    public BigInteger compute(String arg) throws InterruptedException {
-        //在经过长时间的计算后
-        return new BigInteger(arg);
-    }
-}
-
-class Memoizer<A, V> implements Computable<A, V> {
+public class Memoizer<A, V> implements Computable<A, V> {
 
     private final Map<A, V> cache = new HashMap<A, V>();
     private final Computable<A, V> c;
@@ -28,6 +17,9 @@ class Memoizer<A, V> implements Computable<A, V> {
         this.c = c;
     }
 
+
+    //第一种方式，实现缓存，但是问题，某一个时刻只能有一个线程进行访问，其他的线程都是阻塞状态
+    //思路1，用并发的ConcurrentHashMap代替HashMap
     @Override
     public synchronized V compute(A arg) throws InterruptedException {
 
