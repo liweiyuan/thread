@@ -6,7 +6,7 @@ import java.net.Socket;
 
 /**
  * Created by spark on 17-9-18.
- * 由于单线程的缘故，造成性能比较差
+ * 由于单线程的缘故，造成性能比较差，容易阻塞，导致其他的请求超时或者不可访问。
  */
 public class SingleThreadWebServer {
 
