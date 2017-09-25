@@ -13,7 +13,7 @@ public class TestTimer {
         Timer timer;
 
         public Reminder(int sec) {
-            timer = new Timer();
+            timer = new Timer("");
             timer.schedule(new TimerTask() {
                 @Override
                 public void run() {
