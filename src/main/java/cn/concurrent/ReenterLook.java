@@ -1,6 +1,5 @@
 package cn.concurrent;
 
-import java.awt.*;
 import java.util.concurrent.locks.ReentrantLock;
 
 /**
@@ -18,6 +17,9 @@ public class ReenterLook implements Runnable {
             lock.lock();
             try {
                 i++;
+
+                //操作redis取出、
+                //操作redis刪除
             } finally {
                 lock.unlock();
             }
