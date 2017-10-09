@@ -8,6 +8,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class ReenterLook implements Runnable {
 
     //引入锁，保证临界区数据的安全性
+    //把它声明为成员变量而不是局部变量
     private static ReentrantLock lock = new ReentrantLock();
     public static int i = 0;
 
@@ -17,9 +18,11 @@ public class ReenterLook implements Runnable {
             lock.lock();
             try {
                 i++;
-
                 //操作redis取出、
                 //操作redis刪除
+                /**
+                 * 为什么叫重入锁？
+                 */
             } finally {
                 lock.unlock();
             }
