@@ -1,11 +1,16 @@
 package cn.concurrent.executor;
 
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.concurrent.ScheduledThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
+
 /**
  * Created by spark on 17-9-27.
  */
 public class ScheduledThreadPoolExecutorDemo {
 
- /*   public static void main(String[] args) {
+    public static void main(String[] args) {
         SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
         ScheduledThreadPoolExecutor pool =
                 new ScheduledThreadPoolExecutor(5);
@@ -17,5 +22,5 @@ public class ScheduledThreadPoolExecutorDemo {
         }
         pool.shutdown();
         System.out.println("end main时间:" + sdf.format(new Date()));
-    }*/
+    }
 }
