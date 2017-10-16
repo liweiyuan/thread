@@ -7,6 +7,9 @@ import java.util.concurrent.*;
  * Created by spark on 17-10-16.
  * 最开始我们介绍了 thread.join()，可以让一个线程等另一个线程运行完毕后再继续执行，
  * 那我们可以在 D 线程里依次 join A B C，不过这也就使得 A B C 必须依次执行，而我们要的是这三者能同步运行。
+ *
+ *
+ * https://github.com/liweiyuan/HelloJava/blob/master/multi-thread/src/HelloConcurrent.java
  */
 public class HelloConcurrent {
     public static void main(String[] args) {
