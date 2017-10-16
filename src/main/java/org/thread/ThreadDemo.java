@@ -43,11 +43,11 @@ public class ThreadDemo {
          B print: 2
          A print: 3
          B print: 3
-           可以看到是同时打印的
+         可以看到是同时打印的
          */
     }
 
-    private static void demo2(){
+    private static void demo2() {
         Thread A = new Thread(new Runnable() {
             @Override
             public void run() {
@@ -83,7 +83,7 @@ public class ThreadDemo {
     /**
      * A 1, B 1, B 2, B 3, A 2, A 3
      */
-    private static void demo3(){
+    private static void demo3() {
         Object lock = new Object();
         Thread A = new Thread(new Runnable() {
             @Override
