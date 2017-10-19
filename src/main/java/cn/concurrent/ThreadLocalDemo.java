@@ -43,5 +43,6 @@ public class ThreadLocalDemo {
         for (int i = 0; i < 1000; i++) {
             es.execute(new ParseDate(i));
         }
+        es.shutdown();
     }
 }
