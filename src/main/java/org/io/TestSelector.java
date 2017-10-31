@@ -20,5 +20,5 @@ public class TestSelector {
         } catch (Exception ex) {
             throw new RuntimeException(ex);
         }
-}
+    }
 }

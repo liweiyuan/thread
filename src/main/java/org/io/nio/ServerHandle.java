@@ -104,7 +104,19 @@ public class ServerHandle implements Runnable {
                 socketChannel.configureBlocking(false);
                 //注册为读
                 //注册为读
-                socketChannel.register(selector, SelectionKey.OP_READ);
+                SelectionKey selection=socketChannel.register(selector, SelectionKey.OP_READ);
+                System.err.println(selection);
+                boolean accept=selection.isAcceptable();
+                boolean connect=selection.isConnectable();
+                boolean read=selection.isReadable();
+                boolean write=selection.isWritable();
+                boolean vaild=selection.isValid();
+                System.err.println("accept: "+accept);
+                System.err.println("connect: "+connect);
+                System.err.println("read: "+read);
+                System.err.println("write: "+write);
+                System.err.println("vaild: "+vaild);
+
             }
 
             System.out.println();
