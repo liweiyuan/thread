@@ -48,13 +48,13 @@ public class ThreadDemo {
     }
 
     private static void demo2() {
-        Thread A = new Thread(new Runnable() {
+        final Thread A = new Thread(new Runnable() {
             @Override
             public void run() {
                 printNumber("A");
             }
         });
-        Thread B = new Thread(new Runnable() {
+        final Thread B = new Thread(new Runnable() {
             @Override
             public void run() {
                 System.out.println("B 开始等待 A");
@@ -84,7 +84,7 @@ public class ThreadDemo {
      * A 1, B 1, B 2, B 3, A 2, A 3
      */
     private static void demo3() {
-        Object lock = new Object();
+        final Object lock = new Object();
         Thread A = new Thread(new Runnable() {
             @Override
             public void run() {

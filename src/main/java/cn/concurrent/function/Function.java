@@ -1,10 +1,13 @@
+/*
 package cn.concurrent.function;
 
 import java.util.Arrays;
 
+*/
 /**
  * Created by spark on 17-9-19.
- */
+ *//*
+
 public class Function {
 
 
@@ -28,3 +31,4 @@ public class Function {
         declarative();
     }
 }
+*/

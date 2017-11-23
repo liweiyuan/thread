@@ -1,3 +1,4 @@
+/*
 package cn.concurrent.fork_join;
 
 import cn.concurrent.CountTask;
@@ -6,10 +7,12 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
 import java.util.concurrent.RecursiveTask;
 
+*/
 /**
  * Created by tingyun on 2017/11/16.
  * <p>fork/join框架详解</p>
- */
+ *//*
+
 public class CountTaskTmp extends RecursiveTask<Integer> {
 
     private static final int THRESHOLD = 2;
@@ -23,11 +26,13 @@ public class CountTaskTmp extends RecursiveTask<Integer> {
         this.end = end;
     }
 
-    /**
+    */
+/**
      * 核心逻辑
      *
      * @return
-     */
+     *//*
+
     @Override
     protected Integer compute() {
         int sum = 0;
@@ -64,3 +69,4 @@ public class CountTaskTmp extends RecursiveTask<Integer> {
         }
     }
 }
+*/

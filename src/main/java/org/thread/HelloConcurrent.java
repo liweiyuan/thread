@@ -19,7 +19,7 @@ public class HelloConcurrent {
 
     private static void runABC() {
         int worker = 3;
-        CountDownLatch countDownLatch = new CountDownLatch(worker);
+        final CountDownLatch countDownLatch = new CountDownLatch(worker);
         new Thread(new Runnable() {
             @Override
             public void run() {
@@ -64,8 +64,8 @@ public class HelloConcurrent {
      */
     private static void runABCWhenAllReady() {
         int worker = 3;
-        CyclicBarrier cyclicBarrier = new CyclicBarrier(worker);
-        Random random=new Random();
+        final CyclicBarrier cyclicBarrier = new CyclicBarrier(worker);
+        final Random random=new Random();
         for(char threadName='A';threadName<='C';threadName++){
             final String rN = String.valueOf(threadName);
             new Thread(new Runnable() {
