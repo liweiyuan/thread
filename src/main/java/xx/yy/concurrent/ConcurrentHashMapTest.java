@@ -13,7 +13,11 @@ public class ConcurrentHashMapTest {
         Map<String,String> map=new ConcurrentHashMap<String, String>();
 
         map.put("java","Hadoop");
+        map.put("java","python");
 
+        map.get("java");
+        map.get("java");
+        map.size();
         System.err.println(map);
 
     }
