@@ -32,7 +32,10 @@ public class HashMapTest {
                 }
             }
         });
-        thread.start();;
+        thread.start();
         thread.join();
+
+        System.err.println(1 << 30);
+
     }
 }
