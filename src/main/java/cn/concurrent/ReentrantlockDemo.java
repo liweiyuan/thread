@@ -34,6 +34,7 @@ public class ReentrantlockDemo {
                 for (int i = 0; i < 5; i++) {
                     arrayList.add(i);
                 }
+                //Thread.sleep(1000*60*4);
             } catch (Exception e) {
 
             } finally {

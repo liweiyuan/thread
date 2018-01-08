@@ -37,5 +37,38 @@ public class HashMapTest {
 
         System.err.println(1 << 30);
 
+
     }
+
+    final  int number=3;
+
+    final Student student=new Student();
+
+
+    class Student{
+        private int id;
+        private String name;
+
+        public int getId() {
+            return id;
+        }
+
+        public void setId(int id) {
+            this.id = id;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public void setName(String name) {
+            this.name = name;
+        }
+    }
+
+    public void set(){
+        student.setId(20);
+
+    }
+
 }
