@@ -33,4 +33,9 @@ public class FixedCapacityStackOfStrings {
     public String pop() {
         return cp[--size];
     }
+
+    //判断定容栈是否满
+    public boolean isFull(){
+        return size==cp.length;
+    }
 }
