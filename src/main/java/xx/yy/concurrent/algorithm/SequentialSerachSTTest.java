@@ -14,7 +14,10 @@ public class SequentialSerachSTTest {
         Integer result=st.get("wade");
         System.err.println(result);
         st.put("wade",3);
+        st.put("hello",4);
         result=st.get("wade");
         System.err.println(result);
+
+        st.delete("wade");
     }
 }

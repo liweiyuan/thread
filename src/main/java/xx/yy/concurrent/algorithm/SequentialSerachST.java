@@ -8,6 +8,8 @@ public class SequentialSerachST<Key,Value> {
 
     //链表的首节点
     private Node first;
+
+    private int size=0;
     private class Node{
         //链表节点的定义
         private Key key;
@@ -39,5 +41,25 @@ public class SequentialSerachST<Key,Value> {
             }
         }
         first=new Node(key,value,first);//未命中，创建新的节点
+        size++;
     }
+    //查找指定的节点，找到就删除
+    public void delete(Key key){
+        first=delete(first,key);
+    }
+
+    private Node delete(Node x, Key key) {
+        if(x==null){
+            return null;
+        }
+        if(key.equals(x.key)){
+            size--;
+            return x.next;
+        }
+        //思路：首先判断链表的首节点是不是要找的节点，不是的话就递归找下一个，依次找
+        x.next=delete(x.next,key);
+        return x;
+    }
+
+
 }
