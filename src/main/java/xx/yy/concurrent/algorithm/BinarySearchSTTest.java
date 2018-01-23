@@ -11,7 +11,9 @@ public class BinarySearchSTTest {
         bs.put(3,3);
         bs.put(2,4);
         bs.put(1,4);
+        bs.put(4,6);
+        bs.put(5,5);
         System.err.println(bs.size());
-
+        bs.get(2);
     }
 }

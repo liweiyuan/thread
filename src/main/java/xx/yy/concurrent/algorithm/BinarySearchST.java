@@ -26,7 +26,6 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
             return null;
         }
         int i = rank(key, 0, size - 1);
-        ;
         if (i < size && keys[i].compareTo(key) == 0) {
             return values[i];
         } else {
