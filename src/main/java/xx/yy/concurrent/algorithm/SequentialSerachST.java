@@ -61,5 +61,10 @@ public class SequentialSerachST<Key,Value> {
         return x;
     }
 
+    //符号表的容量
+    public int size(){
+        return size;
+    }
+
 
 }

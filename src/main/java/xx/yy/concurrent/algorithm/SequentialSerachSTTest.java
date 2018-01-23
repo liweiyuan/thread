@@ -19,5 +19,7 @@ public class SequentialSerachSTTest {
         System.err.println(result);
 
         st.delete("wade");
+
+        System.err.println(st.size());
     }
 }
