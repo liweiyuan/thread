@@ -15,5 +15,7 @@ public class BinarySearchSTTest {
         bs.put(5,5);
         System.err.println(bs.size());
         bs.get(2);
+
+        System.err.println(bs.ceiling(1));
     }
 }

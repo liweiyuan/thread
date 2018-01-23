@@ -1,5 +1,6 @@
 package xx.yy.concurrent.algorithm;
 
+
 /**
  * Created by tingyun on 2018/1/23.
  * 有序符号表的实现，基于两个数组(算法查找基于二分查找)
@@ -85,6 +86,68 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
 
     public boolean isEmpty() {
         return size == 0;
+    }
+
+    //key值最大的求解
+    public Key max() {
+        return keys[size - 1];
+    }
+
+    //key值最小的求解
+    public Key min() {
+        return keys[0];
+    }
+
+    //按照索引查找某个元素
+    public Key select(int k) {
+        return keys[k];
+    }
+
+    //大于等于k的最小键
+    public Key ceiling(Key key) {
+        int i = rank(key);
+        return keys[i];
+    }
+
+    public Iterable<Key> keys(Key h0, Key hi) {
+        Queue<Key> q = new Queue<Key>();
+        for (int i = rank(h0); i < rank(hi); i++) {
+            q.enqueue(keys[i]);
+        }
+        if (contains(hi)) {
+            q.enqueue(keys[rank(hi)]);
+        }
+        return q;
+    }
+
+    public boolean contains(Key key) {
+        return get(key) != null;
+    }
+
+    //删除最小的元素
+    public void deleteMin() {
+        delete(min());
+    }
+    //删除最大的元素
+    public void deleteMax(){
+        delete(max());
+    }
+
+    //删除一个元素
+    public void delete(Key key) {
+        if (isEmpty()) {
+            return;
+        }
+        int i = rank(key);
+        if (i < size && keys[i].compareTo(key) == 0) {
+            for (int j = i; j < size - 1; j++) {
+                keys[j] = keys[j + 1];
+                values[j] = values[j + 1];
+            }
+            size--;
+            keys[size] = null;
+            values[size] = null;
+        }
     }
 
 }
