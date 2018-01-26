@@ -128,8 +128,9 @@ public class BinarySearchST<Key extends Comparable<Key>, Value> {
     public void deleteMin() {
         delete(min());
     }
+
     //删除最大的元素
-    public void deleteMax(){
+    public void deleteMax() {
         delete(max());
     }
 
