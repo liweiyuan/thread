@@ -23,6 +23,7 @@ public class Factorial {
     }
 
     //时间复杂度mlogn
+    //幂乘算法
     private static double power(double d, int n) {
         if (n == 0) {
             return 1;
