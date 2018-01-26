@@ -54,4 +54,56 @@ public class BST<Key extends Comparable<Key>, Value> {
             return x.value;
         }
     }
+
+    //插入一个元素(查找key,找到则更新，找不到就插入)
+    public void put(Key key, Value value) {
+        root = put(root, key, value);
+    }
+
+    private Node put(Node x, Key key, Value value) {
+        //如果key存在于x节点中，则更新它
+        //否则将以key,value作为新节点，插入到树中
+        if (x == null) {
+            return new Node(key, value, 1);
+        }
+        int cmp = key.compareTo(x.key);
+        if (cmp > 0) {
+            put(x.right, key, value);
+        } else if (cmp < 0) {
+            put(x.left, key, value);
+        } else {
+            x.value = value;
+
+        }
+        x.size = size(x.left) + size(x.right) + 1;
+        return x;
+    }
+
+    //查找value值最小
+    public Value min(Key key){
+        return min(root,key);
+    }
+
+    private Value min(Node x, Key key) {
+        if(x==null){
+            return x.value;
+        }else {
+            return min(x.left,key);
+        }
+    }
+
+    //查找value值最大
+    public Value max(Key key){
+        return max(root,key);
+    }
+
+    private Value max(Node x, Key key) {
+        if(x==null){
+            return x.value;
+        }else {
+            return max(x.right,key);
+        }
+    }
+
+    
 }
