@@ -80,30 +80,92 @@ public class BST<Key extends Comparable<Key>, Value> {
     }
 
     //查找value值最小
-    public Value min(Key key){
-        return min(root,key);
+    public Key min() {
+        return min(root).key;
     }
 
-    private Value min(Node x, Key key) {
-        if(x==null){
-            return x.value;
-        }else {
-            return min(x.left,key);
+    private Node min(Node x) {
+        if (x == null) {
+            return x;
+        } else {
+            return min(x.left);
         }
     }
 
     //查找value值最大
-    public Value max(Key key){
-        return max(root,key);
+    public Key max() {
+        return max(root).key;
     }
 
-    private Value max(Node x, Key key) {
-        if(x==null){
-            return x.value;
-        }else {
-            return max(x.right,key);
+    private Node max(Node x) {
+        if (x == null) {
+            return x;
+        } else {
+            return max(x.right);
         }
     }
 
-    
+    //找到排名为key的键
+    public Key select(int k) {
+        return select(root, k).key;
+    }
+
+    private Node select(Node x, int k) {
+        if (x == null) {
+            return null;
+        }
+        int t = size(x.left);
+        if (t > k) {
+            return select(x.left, k);
+        } else if (t < k) {
+            return select(x.right, k - t - 1);
+        } else {
+            return x;
+        }
+    }
+
+    //删除最小的key
+    public void deleteMin() {
+        root = deleteMin(root);
+    }
+
+    private Node deleteMin(Node x) {
+        if (x.left == null) {
+            return x.right;
+        }
+        x.left = deleteMin(x.left);
+        x.size = size(x.left) + size(x.right) + 1;
+        return x;
+    }
+
+    //删除某个节点
+    public void delete(Key key) {
+        root = delete(root, key);
+    }
+
+    private Node delete(Node x, Key key) {
+        if (x == null) {
+            return null;
+        }
+        int cmp = key.compareTo(x.key);
+        if (cmp > 0) {
+            x.right = delete(x.right, key);
+        } else if (cmp < 0) {
+            x.left = delete(x.left, key);
+        } else {
+            if(x.right==null){
+                return x.left;
+            }else if(x.left==null){
+                return x.right;
+            }else {
+                Node t=x;
+                x= min(t.right);
+                x.right=deleteMin(t.right);
+                x.left=t.left;
+            }
+
+        }
+        x.size=size(x.left)+size(x.right)+1;
+        return x;
+    }
 }
