@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/java_thread.iml" filepath="$PROJECT_DIR$/java_thread.iml" />
-      <module fileurl="file://D:\应用实例\自己学习\program-logic\program-logic\program-logic.iml" filepath="D:\应用实例\自己学习\program-logic\program-logic\program-logic.iml" />
     </modules>
   </component>
 </project>
