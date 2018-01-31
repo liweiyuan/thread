@@ -4,7 +4,7 @@ package xx.yy.concurrent.algorithm;
  * Created by spark on 18-1-30.
  * 红黑树的实现
  */
-public class ReadBlackBST<Key extends Comparable<Key>, Value> {
+public class RedBlackBST<Key extends Comparable<Key>, Value> {
     //根节点
     private Node root;
 
