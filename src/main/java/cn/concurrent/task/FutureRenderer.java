@@ -15,7 +15,7 @@ public class FutureRenderer {
         Callable<List<?>> task = new Callable<List<?>>() {
             @Override
             public List<?> call() throws Exception {
-                List<?> result = new ArrayList<>();
+                List<?> result = new ArrayList();
                 /*for(ImageInfo imageInfo:imageInfos){
                     result.add(imageInfo.downLoadImage());
                 }*/

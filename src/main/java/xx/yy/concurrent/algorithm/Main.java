@@ -19,9 +19,9 @@ public class Main {
         }
         // 输入有向图数据
         // 1. 先输入顶点，暂时令firstIn， firstOut为null;
-        ArrayList<Vertex<Integer, Integer>> vertexList = new ArrayList<>();
+        ArrayList<Vertex<Integer, Integer>> vertexList = new ArrayList();
         for (int i = 0; i < vertexNumber; i++) {
-            Vertex<Integer, Integer> v = new Vertex<>(i);
+            Vertex<Integer, Integer> v = new Vertex(i);
             vertexList.add(v);
         }
         //System.err.println(vertexList);

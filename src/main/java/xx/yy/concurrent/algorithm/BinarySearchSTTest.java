@@ -6,7 +6,7 @@ package xx.yy.concurrent.algorithm;
 public class BinarySearchSTTest {
 
     public static void main(String[] args) {
-        BinarySearchST<Integer,Integer> bs=new BinarySearchST<>(10);
+        BinarySearchST<Integer,Integer> bs=new BinarySearchST(10);
 
         bs.put(3,3);
         bs.put(2,4);

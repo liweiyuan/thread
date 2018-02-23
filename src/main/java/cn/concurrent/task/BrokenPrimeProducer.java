@@ -38,7 +38,7 @@ public class BrokenPrimeProducer extends Thread {
 
     //消費方法
     void consumerPrimes() {
-        BlockingQueue<BigInteger> prime = new LinkedBlockingQueue<>(20);
+        BlockingQueue<BigInteger> prime = new LinkedBlockingQueue(20);
         BrokenPrimeProducer primeProducer = new BrokenPrimeProducer(prime);
         primeProducer.start();
         try {
