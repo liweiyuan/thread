@@ -35,7 +35,7 @@ public class TranceThreadPoolExecutor extends ThreadPoolExecutor {
                     task.run();
                 } catch (Exception e) {
                     e.printStackTrace();
-                    throw e;
+                    //throw e;
                 }
             }
         };
