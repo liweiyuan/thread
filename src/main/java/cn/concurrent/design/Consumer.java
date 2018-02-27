@@ -1,5 +1,6 @@
 package cn.concurrent.design;
 
+
 import java.text.MessageFormat;
 import java.util.Random;
 import java.util.concurrent.BlockingQueue;
