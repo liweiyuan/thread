@@ -8,6 +8,8 @@ import java.util.concurrent.Executors;
 /**
  * Created by spark on 17-9-16.
  * 闭锁操作，等所有的都准备好，才可以进行
+ *
+ * 面试题已已经问过
  */
 public class CountDownLatchDemo implements Runnable {
 
