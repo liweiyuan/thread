@@ -1,6 +1,6 @@
-package xx.yy.concurrent.proxy.jdk;
+package xx.yy.concurrent.proxy.jdk.static1;
 
-import java.util.concurrent.CountDownLatch;
+import xx.yy.concurrent.proxy.jdk.static1.Count;
 
 /**
  * Created by tingyun on 2018/3/13.

@@ -1,4 +1,4 @@
-package xx.yy.concurrent.proxy.jdk;
+package xx.yy.concurrent.proxy.jdk.static1;
 
 /**
  * Created by tingyun on 2018/3/13.
