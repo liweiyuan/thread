@@ -21,8 +21,7 @@ public class Main {
         int bufferSize = 1024;
         Disruptor<PCData> disruptor = new Disruptor<PCData>(factory, bufferSize, executor,
                 ProducerType.MULTI, new BlockingWaitStrategy());
-        disruptor.handleEventsWithWorkerPool(new Consumer(),
-                new Consumer(),
+        disruptor.handleEventsWithWorkerPool(new Consumer(), new Consumer(),
                 new Consumer(),
                 new Consumer());
         disruptor.start();
@@ -31,6 +30,7 @@ public class Main {
         ByteBuffer bb = ByteBuffer.allocate(8);
         for (long l = 0; true; l++) {
             bb.putLong(0, 1);
+            //生产者发布数据
             producer.pushData(bb);
             Thread.sleep(100);
             System.out.println("add data " + l);

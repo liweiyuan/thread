@@ -2,6 +2,7 @@ package cn.concurrent.disruptor;
 
 /**
  * Created by spark on 17-9-6.
+ * 向RingBuffer中插入的事件元素。
  */
 public class PCData {
     private long value;
