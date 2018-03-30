@@ -17,6 +17,7 @@ public class Producer {
 
     //相当于生产者生产消息，放入到环形队列中。
     public void pushData(ByteBuffer bb) {
+        //sequence指序列号。
         long sequence = ringBuffer.next();//Gtab the next sequence
         try {
             PCData pcData = ringBuffer.get(sequence);//Get the entry in the Disruptor for the sequence

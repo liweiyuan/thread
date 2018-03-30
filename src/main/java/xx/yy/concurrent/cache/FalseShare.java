@@ -59,8 +59,8 @@ public class FalseShare implements Runnable {
     //数组元素：
     public final static class VolatileLong {
         public volatile long value = 0L;
-        //public long p1, p2, p3, p4, p5; //代码1
-        //public int p6;//代码1
+        public long p1, p2, p3, p4, p5; //代码1
+        public int p6;//代码1
     }
     /**
      * 注释代码1前后理解伪共享

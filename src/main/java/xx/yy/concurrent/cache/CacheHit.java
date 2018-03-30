@@ -2,7 +2,8 @@ package xx.yy.concurrent.cache;
 
 /**
  * Created by tingyun on 2017/12/1.
- * 缓存命中实例解析
+ * 缓存命中实例解析--深度解析Disruptor并发框架
+ * 解决痛点伪共享(模拟伪共享)
  */
 public class CacheHit {
 
