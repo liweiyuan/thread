@@ -12,6 +12,12 @@ public class Collections {
 
         Boolean b=StringUtils.isAnyEmpty(title,desc);
         System.err.println(b);
+        
+        
+        aoo();
+    }
+
+    private static void aoo() {
     }
 
 }
