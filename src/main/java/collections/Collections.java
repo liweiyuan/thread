@@ -18,6 +18,10 @@ public class Collections {
     }
 
     private static void aoo() {
+        c();
+    }
+
+    private static void c() {
     }
 
 }
